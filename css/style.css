@@ -1,0 +1,264 @@
+/* Variables */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root {
+    --roboto:"Roboto", sans-serif;
+    --red: rgb(197, 20, 20);
+    --yellow: yellow;
+    --orange: orange;
+    --green: green;
+    --dark: rgba(0, 0, 0, 0.801);
+    --blue: blue;
+    --white: #fefefe;
+    --purple: rgb(121, 8, 121);
+}
+
+/* Generales */
+html {
+    box-sizing: border-box;
+}
+body{
+    font-family: var(--roboto);
+}
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark);
+}
+ul{
+    list-style: none;
+}
+
+button{
+    cursor: pointer;
+    border: none;
+}
+/* Utilidades */
+.contenedor {
+    width: 100%;
+    padding: 1rem;
+
+}
+
+@media (min-width:720px) {
+    .contenedor {
+        max-width: 1200px;
+        margin: auto;
+    }
+}
+
+/* Botones */
+.btn {
+    padding: 0.8rem 2rem;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+.btn-red{
+    background-color: var(--red);
+    color: var(--white);
+    transition: filter 0.5s linear;
+}
+.btn-red:hover{
+    filter: brightness(0.7);
+}
+.btn-transparent {
+    background: transparent;
+}
+
+.btn-transparent:hover {
+    border: solid 1px var(--red);
+}
+
+/* Bordes */
+.border {
+    border: 1px solid var(--dark);
+}
+
+/* Colores */
+.bg-purple {
+    background-color: var(--purple);
+}
+
+.bg-yellow {
+    background-color: var(--yellow);
+}
+
+.bg-orange {
+    background-color: var(--orange);
+}
+
+.bg-dark {
+    background-color: var(--dark);
+}
+
+.bg-red {
+    background-color: var(--red);
+}
+
+.bg-green {
+    background-color: var(--green);
+}
+
+.bg-blue {
+    background-color: var(--blue);
+}
+
+.bg-light {
+    background-color: var(--white);
+}
+/* Textos */
+.text-light {
+    color: var(--white);
+}
+
+.text-dark {
+    color: var(--dark);
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* BOX */
+.p-1 {
+    padding: 1rem;
+}
+/* Encabezado */
+.header{
+    display: flex;
+    align-items: center;
+    min-height: 20rem;
+    background-color: var(--dark);
+}
+.navegacion{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+}
+@media (min-width:720px) {
+    .navegacion{
+        justify-content: space-between;
+        flex-direction: row;
+    }
+}
+.heading-nav{
+    width: 30%;
+    color: var(--white);
+}
+
+.lista-enlaces{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+@media (min-width:720px) {
+    .lista-enlaces{
+        gap: 2rem;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: row;
+    }
+}
+.lista-enlaces li a,
+.lista-enlaces li button {
+    padding: 1rem;
+    font-size: 16px;
+    display: inline-block;
+    color: var(--white);
+    width: 100%;
+    border-bottom: var(--white) 1px solid;
+    transition: background-color 0.5s ease-in-out;
+    background-color: transparent;
+}
+@media (min-width:720px) {
+    .lista-enlaces li a,
+    .lista-enlaces li button {
+        padding: 0.5rem 2rem;
+    }
+}
+.lista-enlaces li a:hover,
+.lista-enlaces li button:hover{
+    background-color: var(--white);
+    color: var(--dark);
+}
+
+/* Cards */
+
+.principal h1{
+    margin: 2rem 0;
+}
+.contenedor-cartas{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.carta{
+    width: 100%;
+    background-color: #050303;
+    border-radius: 10px;
+    overflow: hidden;
+}
+@media (min-width:720px) {
+    .carta{
+        width: calc(33% - 2rem);
+    }
+}
+.carta-encabezado{
+    height: 300px;
+    background-image: url(../img/card-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-bottom: 1px solid --dark;
+}
+.carta-cuerpo{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.carta-cuerpo h3{
+    color: var(--white);
+}
+.iconos{
+    display: flex;
+    gap: 1rem;
+}
+.icono{
+    font-size: 2rem;
+}
+#icono-js{
+    color: var(--yellow);
+}
+#icono-html{
+    color: var(--orange);
+}
+#icono-css{
+    color: var(--blue);
+}
+
+.carta-pie{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+/* Footer */
+.footer{
+    background-color: var(--dark);
+    padding: 4rem 0;
+}
