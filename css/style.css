@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 :root {
     --roboto:"Roboto", sans-serif;
-    --red: rgb(197, 20, 20);
+    --red: #8d2525f5;
     --yellow: yellow;
     --orange: orange;
     --green: green;
@@ -10,6 +10,7 @@
     --blue: blue;
     --white: #fefefe;
     --purple: rgb(121, 8, 121);
+    --gray:#bfbfbf;
 }
 
 /* Generales */
@@ -143,7 +144,7 @@ button{
     display: flex;
     align-items: center;
     min-height: 20rem;
-    background-color: var(--dark);
+    background-color: var(--red);
 }
 .navegacion{
     display: flex;
@@ -212,9 +213,13 @@ button{
 
 .principal h1{
     margin: 2rem 0;
+    text-transform: uppercase;
 }
 .contenedor-cartas{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color:var(--blue) ; */
     flex-wrap: wrap;
     gap: 2rem;
 }
@@ -225,9 +230,14 @@ button{
     overflow: hidden;
     /* box-shadow: inset 1px 2px 9px -1px rgba(0,0,0,0.75);
      */
-     box-shadow: inset 1px 2px 24px -1px rgba(0,0,0,0.75);
+    box-shadow: inset 1px 2px 24px -1px rgba(0,0,0,0.75);
 }
 @media (min-width:720px) {
+    .carta{
+        width: calc(50% - 2rem);
+    }
+}
+@media (min-width:1200px) {
     .carta{
         width: calc(33% - 2rem);
     }
@@ -274,6 +284,20 @@ button{
 }
 /* Footer */
 .footer{
-    background-color: var(--dark);
+    background-color: var(--red);
     padding: 4rem 0;
+}
+
+/* Dark Mode */
+.dark-mode{
+    background-color: var(--gray);
+}
+.dark-mode .header{
+    background-color: var(--dark);
+}
+.dark-mode .principal h1{
+    color: var(--dark);
+}
+.dark-mode .footer{
+    background-color: var(--dark);
 }
