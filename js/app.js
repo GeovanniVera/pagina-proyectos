@@ -4,7 +4,16 @@ document.addEventListener('DOMContentLoaded',function(){
 });
 
 function changeDarkMode(){
+
+    // Variable Local de la funcion 
+    let img = document.createElement('img');
+    img.classList.add('dark-mode-btn');
+    img.setAttribute('id','svg-dark-mode');
+    btnDrakMode = document.querySelector('#dark-mode-btn');
+    btnDrakMode.appendChild(img);
     let svgDarkMode = document.querySelector('#svg-dark-mode');
+    
+    
     if (localStorage.getItem('theme') === 'dark' || window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.classList.add('dark-mode');
         svgDarkMode.src = '/img/darkMode.svg';
@@ -27,7 +36,7 @@ function changeDarkMode(){
         }
     });
 
-    btnDrakMode = document.querySelector('#dark-mode-btn');
+    
     btnDrakMode.addEventListener('click', function() {
       
         let isDarkMode = document.body.classList.contains('dark-mode');

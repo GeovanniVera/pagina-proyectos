@@ -179,23 +179,36 @@ button{
 }
 @media (min-width:720px) {
     .lista-enlaces{
-
         gap: 2rem;
         justify-content: flex-end;
-        align-items: center;
         flex-direction: row;
     }
 }
+.lista-enlaces li{
+    width: 100%;
+    border-bottom: var(--white) 1px solid;
+    background-color: transparent;
+    border-radius: 10px;
+    transition: background-color 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.lista-enlaces li:hover
+{
+    background-color: var(--white);
+}
 .lista-enlaces li a,
-.lista-enlaces li button {
+.lista-enlaces li button{
     padding: 1rem;
     font-size: 16px;
     display: inline-block;
     color: var(--white);
-    width: 100%;
-    border-bottom: var(--white) 1px solid;
-    transition: background-color 0.5s ease-in-out;
     background-color: transparent;
+    /* width: 100%; */
+}
+.lista-enlaces li a:hover{
+    color: #050303;
 }
 @media (min-width:720px) {
     .lista-enlaces li a,
@@ -203,12 +216,7 @@ button{
         padding: 0.5rem 2rem;
     }
 }
-.lista-enlaces li a:hover,
-.lista-enlaces li button:hover
-{
-    background-color: var(--white);
-    color: var(--dark);
-}
+
 
 /* Cards */
 
@@ -291,7 +299,8 @@ button{
 
 /* Dark Mode */
 .dark-mode-btn{
-    width:  2rem;
+    display: inline-block;
+    font-size:  1rem;
     transition: rotate 0.5s linear;
 }
 .dark-mode-btn:hover{
