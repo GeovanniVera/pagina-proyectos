@@ -204,7 +204,8 @@ button{
     }
 }
 .lista-enlaces li a:hover,
-.lista-enlaces li button:hover{
+.lista-enlaces li button:hover
+{
     background-color: var(--white);
     color: var(--dark);
 }
@@ -289,6 +290,16 @@ button{
 }
 
 /* Dark Mode */
+.dark-mode-btn{
+    width:  2rem;
+    transition: rotate 0.5s linear;
+}
+.dark-mode-btn:hover{
+    
+    rotate: -180deg;
+    filter: invert(100%);
+}
+
 .dark-mode{
     background-color: var(--gray);
 }
