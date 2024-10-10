@@ -145,13 +145,13 @@ button{
     align-items: center;
     min-height: 20rem;
     background-color: var(--red);
-    border-radius: 25px 0px 0px 200px;
+    border-radius: 25px 20px 20px 20px;
     box-shadow: -7px 22px 74px -32px var(--red);
     overflow: hidden;
 }
 @media (min-width:720px) {
     .header{
-        border-radius: 14px 0px 0px 96px;
+        border-radius: 14px 14px 50px 50px;
       
 
     }
@@ -196,7 +196,7 @@ button{
 }
 .lista-enlaces li{
     width: 100%;
-    border-bottom: var(--white) 1px solid;
+    /* border-bottom: var(--white) 1px solid; */
     background-color: transparent;
     /* border-radius: 10px; */
     transition: background-color 0.5s ease-in-out;
@@ -310,7 +310,7 @@ button{
 .footer{
     background-color: var(--red);
     padding: 4rem 0;
-    border-radius: 25px 25px 0px 0px;
+    border-radius: 0px 0px 20px 20px;
 }
 
 /* Dark Mode */
